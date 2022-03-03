@@ -1,0 +1,5 @@
+FROM openjdk:8-jdk-alpine
+WORKDIR /
+COPY HelloWorld.java HelloWorld.java
+RUN javac HelloWorld.java
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "HelloWorld"]
