@@ -4,12 +4,12 @@ version: "3.7"
 
 services:
   app:
-    image: app2001/docker:latest
+    image: integrity11/docker:latest
     restart: always
     ports:
       - "8080:80"
   hello-java:
-    image: app2001/java-app:1
+    image: integrity11/java-app:1
     restart: unless-stopped
     depends_on: 
       - "psql-db"
